@@ -165,3 +165,33 @@ figcaption { font-size: .85rem; color: var(--teak-soft); margin-top: 12px; }
 .foot p { margin: 0; }
 .foot-name { font-family: var(--display); letter-spacing: .14em; }
 .foot-name span { letter-spacing: 0; color: var(--lamp); margin-left: .4em; }
+
+/* ---------- Mark ---------- */
+.mark { display: inline-flex; align-items: center; gap: .55em; }
+.mark-icon { width: 18px; height: 21px; color: var(--lamp); --flame: #F2D27A; }
+.hero-mark { display: block; width: 46px; height: 54px; color: var(--lamp); --flame: #F2D27A; margin-bottom: 18px; }
+.foot-mark { width: 14px; height: 16px; color: var(--lamp); vertical-align: -2px; margin-right: .6em; }
+
+/* ---------- What people came for ---------- */
+.came-for { padding: 0 var(--gutter) clamp(96px, 14vw, 180px); }
+.came-for .lead { font-size: clamp(1.05rem, 1.6vw, 1.25rem); margin-bottom: clamp(40px, 6vw, 80px); }
+.came-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px) clamp(24px, 5vw, 80px); align-items: center; }
+.came-grid h3 { font-family: var(--display); font-weight: 400; font-size: clamp(1.4rem, 2.4vw, 1.9rem); line-height: 1.2; margin: 0 0 .5em; }
+.cf-wide { grid-column: 1 / -1; }
+.cf-wide img { aspect-ratio: 16/9; }
+.cf-wide + .cf-text { grid-column: 1 / -1; max-width: 640px; margin-left: auto; }
+.cf-tall img { aspect-ratio: 4/5; }
+@media (max-width: 760px) { .came-grid { grid-template-columns: 1fr; } .came-grid > * { grid-column: 1 !important; order: 0 !important; margin-left: 0 !important; } }
+
+/* ---------- What we heard ---------- */
+.heard { background: var(--sandstone); padding: clamp(96px, 14vw, 180px) var(--gutter); }
+.heard-inner { max-width: 640px; margin: 0 auto; }
+.heard-inner p { font-size: clamp(1.05rem, 1.5vw, 1.2rem); }
+.heard-sign { font-family: var(--display); font-size: clamp(1.3rem, 2.2vw, 1.7rem) !important; line-height: 1.35; color: var(--verdigris); margin-top: 1.4em; }
+.heard + .garden { padding-top: clamp(96px, 14vw, 180px); }
+
+/* ---------- Where ---------- */
+.where { padding: 0 var(--gutter) clamp(64px, 8vw, 120px); }
+
+/* ---------- Colophon ---------- */
+.colophon { flex-basis: 100%; font-size: .8rem; opacity: .7; margin-top: 12px !important; }

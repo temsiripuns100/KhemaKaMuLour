@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Khema Pool Villas, Pattaya</title>
-<meta name="description" content="Private pool villas in a Khmer-style garden in Pattaya, reopening after renovation.">
+<meta name="description" content="Multi-bedroom private pool villas in a Khmer-style garden south of Pattaya. Reopening after renovation.">
+<link rel="icon" href="images/khema-mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Commissioner:wght@300;400;500&family=Trirong:wght@300;400&display=swap" rel="stylesheet">
@@ -12,10 +13,24 @@
 </head>
 <body>
 
+<!-- The mark: a stepped lintel, two pillars, a lamp lit in the doorway. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 120 140">
+    <path d="M22 60 V54 H30 V46 H40 V38 H50 V30 H70 V38 H80 V46 H90 V54 H98 V60 Z" fill="currentColor"/>
+    <rect x="30" y="64" width="9" height="68" fill="currentColor"/>
+    <rect x="81" y="64" width="9" height="68" fill="currentColor"/>
+    <circle cx="60" cy="88" r="5.5" fill="var(--flame, #F2D27A)"/>
+    <path d="M57 132 L59.4 100 H60.6 L63 132 Z" fill="currentColor"/>
+  </symbol>
+</svg>
+
 <header class="bar">
-  <a class="mark" href="#top">Khema <span lang="th">เขมา</span></a>
+  <a class="mark" href="#top" aria-label="Khema, back to top">
+    <svg class="mark-icon" aria-hidden="true"><use href="#mark"/></svg>
+    <span class="mark-word">Khema</span> <span lang="th">เขมา</span>
+  </a>
   <nav aria-label="Main">
-    <a href="#garden">The garden</a>
+    <a href="#heard">The story</a>
     <a href="#night">After dark</a>
     <a href="#villas">Villas</a>
     <a href="#contact">Write to us</a>
@@ -29,9 +44,10 @@
     <section class="hero" aria-label="Khema">
       <img src="images/naga-path.jpg" alt="A carved stone guardian at the start of a shaded path between temple walls" class="hero-img">
       <div class="hero-text">
+        <svg class="hero-mark" aria-hidden="true"><use href="#mark"/></svg>
         <h1>Khema</h1>
         <p class="hero-th" lang="th">เขมา</p>
-        <p class="hero-line">Private pool villas in a Khmer-style garden, Pattaya. Reopening after renovation.</p>
+        <p class="hero-line">Private pool villas in a Khmer-style garden, south of Pattaya. Reopening after renovation.</p>
       </div>
     </section>
   </div>
@@ -40,15 +56,53 @@
     <p><em>Khema</em> is an old Pali word for safety, and for peace.</p>
   </section>
 
+  <!-- What people came for: taken from what past guests wrote -->
+  <section class="came-for" aria-labelledby="came-h">
+    <h2 id="came-h">What people came for</h2>
+    <p class="lead">Before it closed for renovation, this garden had more than two hundred reviews online. We read them. The same three things come up again and again.</p>
+    <div class="came-grid">
+      <figure class="cf-wide">
+        <img src="images/naga-wall.jpg" alt="A seven-headed naga carved into a wall between temple gates, with plants growing in front" loading="lazy">
+      </figure>
+      <div class="cf-text">
+        <h3>A place that looks like nowhere else</h3>
+        <p>Guests tried to name the style and couldn't settle on one. Thai, Khmer, something older. Gates, guardians and walls carved by hand, all of it photographed endlessly.</p>
+      </div>
+      <figure class="cf-tall">
+        <img src="images/shaded-lane.jpg" alt="A long lane under tall shade trees, lined with carved walls and towers" loading="lazy">
+      </figure>
+      <div class="cf-text">
+        <h3>Quiet, under old trees</h3>
+        <p>It sits away from the city, and people noticed. Few crowds, long shade, a lane where the loudest thing is the leaves.</p>
+      </div>
+      <figure class="cf-tall">
+        <img src="images/naga-garden.jpg" alt="Carved naga pillars rising from a garden of ferns and clay pots" loading="lazy">
+      </figure>
+      <div class="cf-text">
+        <h3>Room for the people you came with</h3>
+        <p>Large villas, each with its own pool, built for families and groups of friends who want to be together and still have space.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we heard: the honest part -->
+  <section id="heard" class="heard" aria-labelledby="heard-h">
+    <div class="heard-inner">
+      <h2 id="heard-h">And what we heard</h2>
+      <p>The same reviews were honest about the rest. The garden was beautiful and the care was not always there. Rooms that needed mending. Not enough hands. Nights that felt dark rather than calm.</p>
+      <p>So the renovation is not about changing what people loved. The carvings, the shade and the pools stay. What is being rebuilt is everything around them: the villas, the comfort inside them, and the way the garden is looked after, day and night.</p>
+      <p class="heard-sign">A place that was always beautiful, learning to be cared for again.</p>
+    </div>
+  </section>
+
   <section id="garden" class="garden">
     <div class="garden-copy">
       <h2>Twenty years of shade</h2>
-      <p>Khema was built twenty years ago in the manner of a Khmer temple garden: carved teak and stone, guardians at the paths, roofs of thatch. Since then the trees have grown up through it and the carvings have darkened. We are keeping all of that.</p>
-      <p>The villas and pools are being rebuilt now. The garden stays as it is.</p>
+      <p>Khema was built twenty years ago in the manner of a Khmer temple garden: carved teak and stone, guardians at the paths, roofs of thatch. Since then the trees have grown up through it and the carvings have darkened. That is the part no renovation could make, and the part we are keeping.</p>
     </div>
     <figure class="garden-photo">
-      <img src="images/carved-pavilion.jpg" alt="A pavilion with carved columns, coloured glass panels and hanging lanterns" loading="lazy">
-      <figcaption>The pavilion off the main garden, photographed during renovation.</figcaption>
+      <img src="images/temple-gate.jpg" alt="A carved stone temple gate under palms and a blue sky" loading="lazy">
+      <figcaption>One of the gates in the garden, photographed during renovation.</figcaption>
     </figure>
   </section>
 
@@ -63,10 +117,10 @@
 
   <section class="daylight">
     <figure class="d-tall">
-      <img src="images/garden-courtyard.jpg" alt="Wooden armchairs and low tables under the trees in the courtyard" loading="lazy">
+      <img src="images/courtyard-path.jpg" alt="A quiet courtyard path between carved green walls and palms" loading="lazy">
     </figure>
     <figure class="d-wide">
-      <img src="images/thatch-day.jpg" alt="A thatched pavilion and carved posts seen from a covered terrace" loading="lazy">
+      <img src="images/carved-pavilion.jpg" alt="A pavilion with carved columns, coloured glass panels and hanging lanterns" loading="lazy">
     </figure>
     <p class="daylight-note">In the morning the courtyard is all shade and moving light.</p>
   </section>
@@ -76,7 +130,7 @@
   <section id="night" class="night">
     <div class="night-head">
       <h2>When the lanterns are lit</h2>
-      <p>After dark the garden turns gold and quiet. Woven lanterns hang in the branches, and the carved gates hold the light.</p>
+      <p>The nights were the part guests liked least. So the night is where the light goes. Woven lanterns in the branches, warm light on the carved gates, a garden that turns gold and quiet instead of dark.</p>
     </div>
     <div class="night-pair">
       <figure class="n-lanterns"><img src="images/lantern-garden.jpg" alt="Woven lanterns lit in the trees above the garden" loading="lazy"></figure>
@@ -93,42 +147,46 @@
 
   <section id="villas" class="villas">
     <h2>The villas</h2>
-    <p>Each villa is being rebuilt with its own pool, behind carved doors and garden walls. We will show them here when they are finished, not before.</p>
-    <p class="villas-note">Photographs, rooms and rates will be added at opening.</p>
+    <p>Multi-bedroom pool villas for families and groups of friends, each behind its own carved doors, each with its own pool. They are being rebuilt now. We will show them here when they are finished, not before.</p>
+    <p class="villas-note">Photographs, room plans and rates will be added at opening.</p>
+  </section>
+
+  <section class="where" aria-labelledby="where-h">
+    <h2 id="where-h">Where it is</h2>
+    <p>Huai Yai, Bang Lamung, Chonburi. South of Pattaya, inland from Jomtien, away from the noise of the city. Come by car; the quiet is the reason it is here.</p>
   </section>
 
   <section id="contact" class="contact">
     <h2>Write to us</h2>
-    <p>Tell us when you would like to come. We will reply when booking opens.</p>
+    <p>Tell us when you would like to come and how many of you there are. We will reply when booking opens.</p>
     <div class="direct">
       <a href="https://wa.me/66000000000">WhatsApp</a>
       <a href="mailto:hello@example.com">hello@example.com</a>
-      <a href="https://maps.google.com/?q=Pattaya">Find us on Google Maps</a>
+      <a href="https://maps.google.com/?q=Huai+Yai+Bang+Lamung+Chonburi">Find us on Google Maps</a>
     </div>
   </section>
 
 </main>
 
 <footer class="foot">
-  <p class="foot-name">Khema <span lang="th">เขมา</span></p>
-  <p>Pattaya, Chonburi, Thailand</p>
+  <p class="foot-name"><svg class="foot-mark" aria-hidden="true"><use href="#mark"/></svg>Khema <span lang="th">เขมา</span></p>
+  <p>Huai Yai, Bang Lamung, Chonburi, Thailand</p>
   <p>Reopening after renovation</p>
+  <p class="colophon">Story and design written with Claude, an AI, from what guests remembered and photographs of the garden.</p>
 </footer>
 
 <script>
   (function () {
-    const root = document.documentElement;
     const bar = document.querySelector('.bar');
     const hero = document.querySelector('.hero');
     const threshold = document.querySelector('.threshold');
     const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Top bar: name only over the threshold, full nav once past it.
     new IntersectionObserver(([e]) => bar.classList.toggle('solid', !e.isIntersecting),
       { rootMargin: '-70px 0px 0px 0px' }).observe(threshold);
 
     if (still) return;
-    root.classList.add('lit');
+    document.documentElement.classList.add('lit');
     let ticking = false;
     function update() {
       const span = threshold.offsetHeight - innerHeight;

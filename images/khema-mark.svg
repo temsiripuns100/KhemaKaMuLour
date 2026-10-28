@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" role="img" aria-label="Khema">
+  <rect width="120" height="140" fill="#17221E"/>
+  <path d="M22 60 V54 H30 V46 H40 V38 H50 V30 H70 V38 H80 V46 H90 V54 H98 V60 Z" fill="#D6AC4E"/>
+  <rect x="30" y="64" width="9" height="68" fill="#D6AC4E"/>
+  <rect x="81" y="64" width="9" height="68" fill="#D6AC4E"/>
+  <circle cx="60" cy="88" r="5.5" fill="#F2D27A"/>
+  <path d="M57 132 L59.4 100 H60.6 L63 132 Z" fill="#D6AC4E"/>
+</svg>
