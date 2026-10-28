@@ -168,9 +168,9 @@ figcaption { font-size: .85rem; color: var(--teak-soft); margin-top: 12px; }
 
 /* ---------- Mark ---------- */
 .mark { display: inline-flex; align-items: center; gap: .55em; }
-.mark-icon { width: 18px; height: 21px; color: var(--lamp); --flame: #F2D27A; }
-.hero-mark { display: block; width: 46px; height: 54px; color: var(--lamp); --flame: #F2D27A; margin-bottom: 18px; }
-.foot-mark { width: 14px; height: 16px; color: var(--lamp); vertical-align: -2px; margin-right: .6em; }
+.mark-icon { width: 24px; height: 24px; color: var(--lamp); --flame: #F2D27A; }
+.hero-mark { display: block; width: 64px; height: 64px; margin-left: -6px; color: var(--lamp); --flame: #F2D27A; margin-bottom: 18px; }
+.foot-mark { width: 18px; height: 18px; color: var(--lamp); vertical-align: -2px; margin-right: .6em; }
 
 /* ---------- What people came for ---------- */
 .came-for { padding: 0 var(--gutter) clamp(96px, 14vw, 180px); }

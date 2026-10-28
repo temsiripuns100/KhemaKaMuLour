@@ -1,8 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" role="img" aria-label="Khema">
-  <rect width="120" height="140" fill="#17221E"/>
-  <path d="M22 60 V54 H30 V46 H40 V38 H50 V30 H70 V38 H80 V46 H90 V54 H98 V60 Z" fill="#D6AC4E"/>
-  <rect x="30" y="64" width="9" height="68" fill="#D6AC4E"/>
-  <rect x="81" y="64" width="9" height="68" fill="#D6AC4E"/>
-  <circle cx="60" cy="88" r="5.5" fill="#F2D27A"/>
-  <path d="M57 132 L59.4 100 H60.6 L63 132 Z" fill="#D6AC4E"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Khema">
+  <rect width="120" height="120" rx="20" fill="#17221E"/>
+  <g fill="#D6AC4E">
+    <path transform="rotate(-66 60 100)" d="M60 100 C54 82 55 66 60 58 C65 66 66 82 60 100 Z"/>
+    <path transform="rotate(-44 60 100)" d="M60 100 C54 80 55 62 60 54 C65 62 66 80 60 100 Z"/>
+    <path transform="rotate(-22 60 100)" d="M60 100 C54 78 55 58 60 50 C65 58 66 78 60 100 Z"/>
+    <path transform="rotate(22 60 100)" d="M60 100 C54 78 55 58 60 50 C65 58 66 78 60 100 Z"/>
+    <path transform="rotate(44 60 100)" d="M60 100 C54 80 55 62 60 54 C65 62 66 80 60 100 Z"/>
+    <path transform="rotate(66 60 100)" d="M60 100 C54 82 55 66 60 58 C65 66 66 82 60 100 Z"/>
+  </g>
+  <path d="M60 100 C53 76 54 54 60 44 C66 54 67 76 60 100 Z" fill="#F2D27A"/>
+  <path d="M26 108 Q60 116 94 108" fill="none" stroke="#D6AC4E" stroke-width="2.2" stroke-linecap="round"/>
 </svg>
