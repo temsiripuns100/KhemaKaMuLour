@@ -1,0 +1,171 @@
+/* Khema — palette taken from the property itself:
+   sandstone walls, dark teak, verdigris on the naga and gates, lantern gold, the garden at night. */
+:root {
+  --sandstone: #C9BCA3;
+  --sandstone-lt: #DCD2BF;
+  --teak: #2B1E15;
+  --teak-soft: #5A4636;
+  --verdigris: #3D6A62;
+  --lamp: #D6AC4E;
+  --night: #17221E;
+  --night-ink: #E6DFCF;
+  --display: "Marcellus", "Trirong", Georgia, serif;
+  --body: "Commissioner", system-ui, sans-serif;
+  --thai: "Trirong", "Marcellus", serif;
+  --gutter: clamp(16px, 5vw, 72px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--sandstone);
+  color: var(--teak);
+  font: 300 1.0625rem/1.65 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+figure { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--lamp); outline-offset: 3px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.1; margin: 0 0 0.6em; }
+h2 { font-size: clamp(1.9rem, 4vw, 3rem); max-width: 16ch; }
+p { margin: 0 0 1em; max-width: 60ch; }
+
+/* ---------- Top bar ---------- */
+.bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px var(--gutter);
+  color: var(--night-ink);
+  background: linear-gradient(to bottom, rgba(23,34,30,.55), rgba(23,34,30,0));
+}
+.mark { font-family: var(--display); font-size: 1.5rem; text-decoration: none; letter-spacing: .02em; }
+.bar nav { display: flex; gap: 28px; align-items: center; font-size: .95rem; }
+.bar nav a { text-decoration: none; }
+.bar nav a:hover { text-decoration: underline; text-underline-offset: 6px; }
+.nav-cta { border: 1px solid var(--night-ink); padding: 8px 16px; border-radius: 2px; }
+@media (max-width: 760px) {
+  .bar nav a:not(.nav-cta) { display: none; }
+}
+
+/* ---------- Hero ---------- */
+.hero { position: relative; height: 100svh; min-height: 560px; overflow: hidden; background: var(--night); }
+.hero-img { object-position: 50% 60%; filter: saturate(.9) contrast(1.03); }
+.hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(23,34,30,.85) 0%, rgba(23,34,30,.1) 55%, rgba(23,34,30,.25) 100%);
+}
+.hero-text {
+  position: absolute; z-index: 1; left: var(--gutter); right: var(--gutter); bottom: clamp(32px, 8vh, 96px);
+  color: var(--night-ink);
+}
+.hero h1 {
+  font-size: clamp(5rem, 19vw, 15rem);
+  line-height: .82; letter-spacing: -.01em; margin: 0;
+  animation: rise 1.6s cubic-bezier(.2,.7,.1,1) both;
+}
+.hero-th { font-family: var(--thai); font-size: clamp(1.4rem, 3vw, 2rem); color: var(--lamp); margin: .3em 0 .9em; }
+.hero-line { font-size: clamp(1rem, 1.6vw, 1.2rem); max-width: 40ch; opacity: .92; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); letter-spacing: .06em; } }
+@media (prefers-reduced-motion: reduce) { .hero h1 { animation: none; } }
+
+/* ---------- Eave: the stepped teak trim seen on every roof at Khema ---------- */
+.eave {
+  height: 18px; margin-top: -18px; position: relative; z-index: 2;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='18'%3E%3Cpath d='M0 18V14H4V10H8V6H12V2H16V0H20V2H24V6H28V10H32V14H36V18Z' fill='%23C9BCA3'/%3E%3C/svg%3E") repeat-x;
+}
+.eave-dark {
+  margin-top: 0; background-color: var(--sandstone);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='18'%3E%3Cpath d='M0 18V14H4V10H8V6H12V2H16V0H20V2H24V6H28V10H32V14H36V18Z' fill='%2317221E'/%3E%3C/svg%3E");
+}
+
+/* ---------- Garden story ---------- */
+.garden {
+  display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(32px, 6vw, 96px);
+  align-items: end; padding: clamp(72px, 12vw, 160px) var(--gutter) clamp(56px, 8vw, 112px);
+}
+.garden-photo img { aspect-ratio: 3/4; }
+figcaption { font-size: .85rem; color: var(--teak-soft); margin-top: 10px; }
+@media (max-width: 820px) { .garden { grid-template-columns: 1fr; } }
+
+/* ---------- Senses ---------- */
+.senses { padding: 0 var(--gutter) clamp(64px, 9vw, 120px); }
+.senses-list {
+  list-style: none; margin: 0; padding: 28px 0 0; border-top: 1px solid rgba(43,30,21,.35);
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;
+}
+.senses-list strong { display: block; font-family: var(--display); font-weight: 400; font-size: 1.45rem; color: var(--verdigris); margin-bottom: 4px; }
+@media (max-width: 820px) { .senses-list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { .senses-list { grid-template-columns: 1fr; } }
+
+/* ---------- Daylight pair ---------- */
+.daylight {
+  display: grid; grid-template-columns: 2fr 3fr; gap: 12px;
+  padding: 0 var(--gutter) clamp(72px, 10vw, 140px);
+}
+.daylight figure:first-child img { aspect-ratio: 3/4; }
+.daylight figure:nth-child(2) { align-self: end; }
+.daylight figure:nth-child(2) img { aspect-ratio: 4/3; }
+.daylight-note { grid-column: 2; font-family: var(--display); font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.35; margin-top: 16px; }
+@media (max-width: 700px) {
+  .daylight { grid-template-columns: 1fr; }
+  .daylight-note { grid-column: 1; }
+}
+
+/* ---------- Night ---------- */
+.night { background: var(--night); color: var(--night-ink); padding: clamp(72px, 11vw, 150px) var(--gutter); }
+.night-head { max-width: 640px; margin-bottom: clamp(36px, 5vw, 64px); }
+.night-head h2 { color: var(--lamp); }
+.night-grid {
+  display: grid; gap: 12px;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas: "large tall" "small tall";
+}
+.n-large { grid-area: large; } .n-large img { aspect-ratio: 16/11; }
+.n-tall  { grid-area: tall; }  .n-tall img { height: 100%; min-height: 420px; }
+.n-small { grid-area: small; } .n-small img { aspect-ratio: 16/9; object-position: 50% 70%; }
+@media (max-width: 700px) {
+  .night-grid { grid-template-columns: 1fr; grid-template-areas: "large" "tall" "small"; }
+  .n-tall img { aspect-ratio: 3/4; min-height: 0; }
+}
+
+/* ---------- Villas ---------- */
+.villas {
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 96px); align-items: center;
+  padding: clamp(80px, 12vw, 160px) var(--gutter);
+  background: var(--sandstone-lt);
+}
+.villas-photo { max-width: 420px; justify-self: end; width: 100%; }
+.villas-photo img { aspect-ratio: 3/4; }
+.villas-note { font-size: .9rem; color: var(--teak-soft); border-left: 2px solid var(--verdigris); padding-left: 12px; }
+@media (max-width: 760px) { .villas { grid-template-columns: 1fr; } .villas-photo { justify-self: start; } }
+
+/* ---------- Contact ---------- */
+.contact { padding: clamp(80px, 11vw, 150px) var(--gutter); }
+.interest { display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 16px; align-items: end; margin: 36px 0 28px; max-width: 1100px; }
+.interest label { display: grid; gap: 6px; font-size: .9rem; }
+.interest input {
+  font: inherit; color: var(--teak); background: transparent;
+  border: 0; border-bottom: 1px solid var(--teak); padding: 8px 0; border-radius: 0;
+}
+.interest input:focus { outline: none; border-bottom: 2px solid var(--verdigris); }
+.interest button {
+  font: 400 1rem var(--body); cursor: pointer;
+  background: var(--verdigris); color: #F2EEE4; border: 0; padding: 12px 28px; border-radius: 2px;
+}
+.interest button:hover { background: #335A53; }
+.direct { display: flex; flex-wrap: wrap; gap: 12px 32px; }
+.direct a { text-underline-offset: 5px; }
+@media (max-width: 820px) { .interest { grid-template-columns: 1fr; } .interest button { justify-self: start; } }
+
+/* ---------- Footer ---------- */
+.foot { background: var(--teak); color: var(--sandstone-lt); padding: 40px var(--gutter); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: .9rem; }
+.foot p { margin: 0; }
+.foot [lang="th"] { font-family: var(--thai); }
+.bar { transition: background-color .3s; }
+.bar.solid { background: var(--night); }

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khema Pool Villas, Pattaya</title>
+<meta name="description" content="Private pool villas in an old Khmer garden in Pattaya. Carved teak, stone and shade trees, reopening after renovation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Commissioner:wght@300;400;500&family=Trirong:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <a class="mark" href="#top">Khema</a>
+  <nav aria-label="Main">
+    <a href="#garden">The garden</a>
+    <a href="#night">After dark</a>
+    <a href="#villas">Villas</a>
+    <a href="#contact" class="nav-cta">Ask about a stay</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-label="Khema">
+    <img src="images/naga-path.jpg" alt="A stone naga guards a shaded path lined with carved temple walls" class="hero-img">
+    <div class="hero-text">
+      <h1>Khema</h1>
+      <p class="hero-th" lang="th">เขมา</p>
+      <p class="hero-line">Private pool villas in an old Khmer garden, Pattaya.<br>Reopening after renovation.</p>
+    </div>
+  </section>
+
+  <div class="eave" aria-hidden="true"></div>
+
+  <section id="garden" class="garden">
+    <div class="garden-copy">
+      <h2>A garden that took twenty years to grow</h2>
+      <p>Khema was built two decades ago from carved teak, laterite and stone, around trees that were left standing. The trees are taller now. The carvings have darkened. That is the part we kept.</p>
+      <p>What we changed is everything you touch: the villas, the pools, the beds, the light. The renovation is still underway, and we are sharing it as it happens.</p>
+    </div>
+    <figure class="garden-photo">
+      <img src="images/carved-pavilion.jpg" alt="A reading pavilion with carved columns, coloured glass panels and hanging lanterns" loading="lazy">
+      <figcaption>The pavilion off the main garden, during renovation.</figcaption>
+    </figure>
+  </section>
+
+  <section class="senses" aria-labelledby="senses-h">
+    <h2 id="senses-h" class="visually-hidden">What you notice first</h2>
+    <ul class="senses-list">
+      <li><strong>Shade</strong> from trees older than the buildings.</li>
+      <li><strong>Teak and stone</strong> worn smooth by hands.</li>
+      <li><strong>Quiet</strong> a few minutes from the city.</li>
+      <li><strong>Lanterns</strong> instead of floodlights after dark.</li>
+    </ul>
+  </section>
+
+  <section class="daylight">
+    <figure class="wide">
+      <img src="images/garden-courtyard.jpg" alt="Wooden armchairs and low tables under the trees in the courtyard" loading="lazy">
+    </figure>
+    <figure class="wide">
+      <img src="images/thatch-day.jpg" alt="Thatched pavilion and carved posts seen from the bar terrace" loading="lazy">
+    </figure>
+    <p class="daylight-note">Mornings are for the courtyard: coffee, shade, and the sound of the leaves.</p>
+  </section>
+
+  <div class="eave eave-dark" aria-hidden="true"></div>
+
+  <section id="night" class="night">
+    <div class="night-head">
+      <h2>After dark the garden changes</h2>
+      <p>Woven lanterns hang from the branches, the carved gates catch the light, and the bar opens under the teak roof.</p>
+    </div>
+    <div class="night-grid">
+      <figure class="n-large"><img src="images/lantern-garden.jpg" alt="Woven lanterns lit in the trees above the garden seating" loading="lazy"></figure>
+      <figure class="n-tall"><img src="images/gate-night.jpg" alt="A carved gate glowing green and gold at night" loading="lazy"></figure>
+      <figure class="n-small"><img src="images/teak-bar.jpg" alt="The carved teak bar with hanging glasses" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section id="villas" class="villas">
+    <div class="villas-copy">
+      <h2>The villas</h2>
+      <p>Each villa has its own pool, garden walls and carved doors. They are being rebuilt now, and we will show them here when they are finished rather than before.</p>
+      <p class="villas-note">Villa photos, room types and rates will be added at opening.</p>
+    </div>
+    <figure class="villas-photo">
+      <img src="images/apsara.jpg" alt="A carved apsara figure on a stone column" loading="lazy">
+    </figure>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Ask about a stay</h2>
+    <p>Leave your details and we will write to you when booking opens, or message us directly.</p>
+    <form class="interest" action="mailto:hello@example.com" method="post" enctype="text/plain">
+      <label>Name<input type="text" name="name" autocomplete="name" required></label>
+      <label>Email<input type="email" name="email" autocomplete="email" required></label>
+      <label>When you would like to come<input type="text" name="dates" placeholder="e.g. February, 3 nights"></label>
+      <button type="submit">Send</button>
+    </form>
+    <div class="direct">
+      <a href="https://wa.me/66000000000">WhatsApp</a>
+      <a href="mailto:hello@example.com">hello@example.com</a>
+      <a href="https://maps.google.com/?q=Pattaya">Find us on Google Maps</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p>Khema, Pattaya, Chonburi, Thailand</p>
+  <p lang="th">เขมา พัทยา ชลบุรี</p>
+</footer>
+
+<script>
+  // Give the top bar a solid background once the hero has scrolled away.
+  const bar = document.querySelector('.bar');
+  const hero = document.querySelector('.hero');
+  new IntersectionObserver(([e]) => bar.classList.toggle('solid', !e.isIntersecting), { rootMargin: '-70px 0px 0px 0px' }).observe(hero);
+</script>
+
+</body>
+</html>
