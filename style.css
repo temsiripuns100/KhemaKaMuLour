@@ -215,10 +215,14 @@ figcaption { font-size: .85rem; color: var(--teak-soft); margin-top: 12px; }
     radial-gradient(circle at 0 100%, #0000 var(--c), #000 calc(var(--c) + .5px)) bottom left / 51% 51% no-repeat,
     radial-gradient(circle at 100% 100%, #0000 var(--c), #000 calc(var(--c) + .5px)) bottom right / 51% 51% no-repeat;
 }
-/* The apsara stands in a pointed temple niche. */
-.apsara img {
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 100V34C0 18 30 10 50 0C70 10 100 18 100 34V100Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 100V34C0 18 30 10 50 0C70 10 100 18 100 34V100Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-}
 /* Captions and notes centred under arches. */
 .garden-photo figcaption { text-align: center; }
+
+.h1-second { display: block; font-size: .62em; letter-spacing: .3em; margin-top: .25em; }
+.hero h1 { line-height: 1; }
+.h1-second { line-height: 1.2; }
+@media (max-width: 760px) {
+  .hero h1 { letter-spacing: .12em; }
+  .h1-second { letter-spacing: .2em; }
+  .hero-th { margin-top: .5em; }
+}

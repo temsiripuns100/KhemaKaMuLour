@@ -1,15 +1,15 @@
-# Khema website (draft for review)
+# Khema KaMuLour website (draft for review)
 
 Static site, no build step. Open `index.html` in a browser, or publish with GitHub Pages.
 
 ## Put it on GitHub Pages
-1. Create a new repository (e.g. `khema-site`) on GitHub.
+1. Create a new repository (e.g. `KhemaKaMuLour`) on GitHub.
 2. Upload everything in this folder (`index.html`, `style.css`, `images/`, `README.md`).
 3. Repository → Settings → Pages → Source: "Deploy from a branch", branch `main`, folder `/ (root)` → Save.
-4. The site appears at `https://<your-username>.github.io/khema-site/` after a minute or two.
+4. The site appears at `https://<your-username>.github.io/KhemaKaMuLour/` after a minute or two.
 
 ## Placeholders to replace before going live
-- Full name of Khema (currently "Khema" / "เขมา")
+- Thai spelling of the full name (currently only "เขมา")
 - WhatsApp number: `https://wa.me/66000000000`
 - Email: `hello@example.com` (also the form's `action`)
 - Google Maps link (currently a search for "Pattaya")
