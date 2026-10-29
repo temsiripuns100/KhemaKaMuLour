@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a stay · Khema KaMuLour Pool Villas, Pattaya</title>
+<meta name="description" content="Ask for dates at Khema KaMuLour, private pool villas in a Khmer-style garden south of Pattaya. We reply personally to every request.">
+<link rel="icon" href="images/khema-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Commissioner:wght@300;400;500&family=Trirong:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="book-page">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 120 120">
+    <g fill="currentColor">
+      <path transform="rotate(-66 60 100)" d="M60 100 C54 82 55 66 60 58 C65 66 66 82 60 100 Z"/>
+      <path transform="rotate(-44 60 100)" d="M60 100 C54 80 55 62 60 54 C65 62 66 80 60 100 Z"/>
+      <path transform="rotate(-22 60 100)" d="M60 100 C54 78 55 58 60 50 C65 58 66 78 60 100 Z"/>
+      <path transform="rotate(22 60 100)" d="M60 100 C54 78 55 58 60 50 C65 58 66 78 60 100 Z"/>
+      <path transform="rotate(44 60 100)" d="M60 100 C54 80 55 62 60 54 C65 62 66 80 60 100 Z"/>
+      <path transform="rotate(66 60 100)" d="M60 100 C54 82 55 66 60 58 C65 66 66 82 60 100 Z"/>
+    </g>
+    <path d="M60 100 C53 76 54 54 60 44 C66 54 67 76 60 100 Z" fill="var(--flame, #F2D27A)"/>
+    <path d="M26 108 Q60 116 94 108" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<header class="bar solid">
+  <a class="mark" href="index.html" aria-label="Khema KaMuLour, home">
+    <svg class="mark-icon" aria-hidden="true"><use href="#mark"/></svg>
+    <span class="mark-word">Khema KaMuLour</span> <span lang="th">เขมา</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="index.html#heard">The story</a>
+    <a href="index.html#villas">Villas</a>
+    <a href="book.html" aria-current="page">Book</a>
+  </nav>
+</header>
+
+<main class="book">
+
+  <section class="book-intro">
+    <figure class="book-photo">
+      <img src="images/gate-night.jpg" alt="A carved gate lit at night beneath the trees">
+    </figure>
+    <div class="book-intro-text">
+      <h1>Ask for your dates</h1>
+      <p>Every stay here is arranged by a person, not a booking engine. Tell us when you would like to come and who is coming with you. We will reply within a day with the villa that suits you, the rate, and how to confirm.</p>
+      <p class="book-note">We are reopening after renovation. Requests for dates before opening are kept in order and answered first when the calendar opens.</p>
+    </div>
+  </section>
+
+  <form id="booking" class="book-form" novalidate>
+
+    <fieldset>
+      <legend><span class="step">1</span>When</legend>
+      <div class="row two">
+        <label>Arrive
+          <input type="date" name="checkin" id="checkin" required>
+        </label>
+        <label>Leave
+          <input type="date" name="checkout" id="checkout" required>
+        </label>
+      </div>
+      <p class="nights" id="nights" aria-live="polite"></p>
+      <label class="check"><input type="checkbox" name="flexible"> My dates can move a little</label>
+    </fieldset>
+
+    <fieldset>
+      <legend><span class="step">2</span>Who is coming</legend>
+      <div class="row three">
+        <label>Adults
+          <input type="number" name="adults" id="adults" min="1" max="30" value="2" inputmode="numeric" required>
+        </label>
+        <label>Children
+          <input type="number" name="children" id="children" min="0" max="20" value="0" inputmode="numeric">
+        </label>
+        <label>Occasion <span class="opt">optional</span>
+          <select name="occasion">
+            <option value="">Just a holiday</option>
+            <option>Family gathering</option>
+            <option>Trip with friends</option>
+            <option>Honeymoon or anniversary</option>
+            <option>Birthday</option>
+            <option>Retreat or company stay</option>
+          </select>
+        </label>
+      </div>
+      <p class="hint" id="children-hint" hidden>Every villa has its own pool. Tell us the children's ages below and we will make sure the pool is fenced or watched.</p>
+    </fieldset>
+
+    <fieldset>
+      <legend><span class="step">3</span>The villa</legend>
+      <div class="choices" role="radiogroup">
+        <label class="choice">
+          <input type="radio" name="villa" value="Let us suggest" checked>
+          <span class="choice-body">
+            <span class="choice-name">Let us suggest</span>
+            <span class="choice-text">We match the villa to your group.</span>
+          </span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="villa" value="Pool villa">
+          <span class="choice-body">
+            <span class="choice-name">Pool villa</span>
+            <span class="choice-text">Several bedrooms around a private pool.</span>
+          </span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="villa" value="Special zone">
+          <span class="choice-body">
+            <span class="choice-name">The special zone</span>
+            <span class="choice-text">The most private part of the garden.</span>
+          </span>
+        </label>
+      </div>
+      <p class="hint">Photographs, room plans and rates will be added at opening.</p>
+    </fieldset>
+
+    <fieldset>
+      <legend><span class="step">4</span>Anything we should arrange</legend>
+      <div class="extras">
+        <label class="check"><input type="checkbox" name="extras" value="Airport transfer"> Airport transfer</label>
+        <label class="check"><input type="checkbox" name="extras" value="Floating breakfast"> Floating breakfast</label>
+        <label class="check"><input type="checkbox" name="extras" value="Late check-out"> Late check-out</label>
+        <label class="check"><input type="checkbox" name="extras" value="Dinner in the garden"> Dinner in the garden</label>
+      </div>
+      <label>Anything else <span class="opt">optional</span>
+        <textarea name="message" rows="4" placeholder="Children's ages, arrival time, dietary needs, a surprise you are planning…"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend><span class="step">5</span>How we reach you</legend>
+      <div class="row two">
+        <label>Your name
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>Country
+          <input type="text" name="country" autocomplete="country-name">
+        </label>
+        <label>Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>WhatsApp or phone <span class="opt">optional</span>
+          <input type="tel" name="phone" autocomplete="tel" placeholder="+44 …">
+        </label>
+      </div>
+    </fieldset>
+
+    <p class="form-error" id="form-error" role="alert" hidden></p>
+
+    <div class="send">
+      <p class="send-lead">Send your request</p>
+      <div class="send-buttons">
+        <button type="submit" name="via" value="whatsapp" class="btn btn-lamp">Send on WhatsApp</button>
+        <button type="submit" name="via" value="email" class="btn btn-line">Send by email</button>
+      </div>
+      <p class="hint">Nothing is charged now. A request is not yet a booking; we will write back to confirm the villa, the rate and the deposit.</p>
+    </div>
+  </form>
+
+  <section class="book-done" id="done" hidden tabindex="-1">
+    <svg class="done-mark" aria-hidden="true"><use href="#mark"/></svg>
+    <h2>Your request is on its way</h2>
+    <p>If WhatsApp or your email did not open, copy the request below and send it to us directly.</p>
+    <pre id="summary" class="summary"></pre>
+    <div class="direct" id="direct"></div>
+    <p><a href="#" id="again">Change the request</a></p>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p class="foot-name"><svg class="foot-mark" aria-hidden="true"><use href="#mark"/></svg>Khema KaMuLour <span lang="th">เขมา</span></p>
+  <p>Huai Yai, Bang Lamung, Chonburi, Thailand</p>
+  <p>Reopening after renovation</p>
+</footer>
+
+<script src="booking.js"></script>
+</body>
+</html>
