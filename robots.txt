@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://temsiripuns100.github.io/KhemaKaMuLour/sitemap.xml
